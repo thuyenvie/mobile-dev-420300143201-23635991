@@ -8,6 +8,7 @@ import {
 
 import StudentCard from '../StudentCard/StudentCard';
 import InfoRow from '../InfoRow/InfoRow';
+import CourseCard from '../CourseCard/CourseCard';
 
 export default function CampusDashboard() {
     return (
@@ -42,6 +43,16 @@ export default function CampusDashboard() {
                     value="Phát triển giao diện ứng dụng"
                 />
             </View>
+
+            <CourseCard
+                title="Lập trình ứng dụng di động"
+                teacher="Nguyễn Văn A"
+                description="Môn học cung cấp kiến thức về phát triển ứng dụng di động bằng React Native và Expo."
+                // imageSource={require('../../assets/images/partial-react-logo.png')}
+                imageSource={{
+                    uri: 'https://picsum.photos/600/300'
+                }}
+            />
 
             <View style={styles.section}>
                 <Text style={styles.sectionTitle}>
