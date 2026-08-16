@@ -13,9 +13,16 @@ export default function InfoRow({
 }: InfoRowProps) {
     return (
         <View style={styles.container}>
-            <Text style={styles.label}>{label}</Text>
+            <Text style={styles.label}>
+                {label}
+            </Text>
 
-            <Text style={[styles.value, emphasized && styles.emphasized]}>
+            <Text
+                style={[
+                    styles.value,
+                    emphasized && styles.emphasized,
+                ]}
+            >
                 {value}
             </Text>
         </View>
@@ -25,17 +32,20 @@ export default function InfoRow({
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        alignItems: 'center',
+        alignItems: 'flex-start',
         marginBottom: 12,
     },
 
     label: {
-        width: 100,
+        flex: 0.45,
+        fontSize: 22,
         fontWeight: 'bold',
+        marginRight: 8,
     },
 
     value: {
-        flex: 1,
+        flex: 0.55,
+        fontSize: 22,
     },
 
     emphasized: {

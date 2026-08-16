@@ -4,21 +4,22 @@ import InfoRow from '../InfoRow/InfoRow';
 export default function StudentCard() {
     return (
         <View style={styles.card}>
-            <Text style={styles.title}>THÔNG TIN SINH VIÊN</Text>
+            <Text style={styles.title}>
+                THÔNG TIN CHI TIẾT VỀ SINH VIÊN
+            </Text>
 
             <InfoRow
-                label="Mã SV:"
+                label="Mã số sinh viên:"
                 value="23635991"
             />
 
             <InfoRow
-                label="Ngành học:"
-                // value="Kỹ thuật phần mềm"
+                label="Chương trình đào tạo và ngành học:"
                 value="Kỹ thuật phần mềm"
             />
 
             <InfoRow
-                label="Niên khóa:"
+                label="Niên khóa đào tạo của sinh viên:"
                 value="2023 - 2027"
             />
         </View>
@@ -34,7 +35,7 @@ const styles = StyleSheet.create({
     },
 
     title: {
-        fontSize: 20,
+        fontSize: 28,
         fontWeight: 'bold',
         marginBottom: 20,
         textAlign: 'center',
