@@ -52,6 +52,8 @@ export default function CampusDashboard() {
                 imageSource={{
                     uri: 'https://picsum.photos/600/300'
                 }}
+                imageDescription="Hình ảnh minh họa cho khóa học Lập trình ứng dụng di động"
+                decorative={false}
             />
 
             <View style={styles.section}>
