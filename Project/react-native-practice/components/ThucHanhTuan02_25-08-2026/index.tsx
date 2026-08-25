@@ -1,4 +1,4 @@
-import CourseListScreen from './Course/CourseListScreen';
+import CourseListScreen from './Course-FlatList/CourseListScreen';
 import { StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
