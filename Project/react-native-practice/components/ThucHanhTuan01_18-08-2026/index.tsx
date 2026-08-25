@@ -17,7 +17,7 @@ const initialProfile: StudentInfo = {
   address: '12 Nguyễn Văn Bảo, phường Hạnh Thông, thành phố Hồ Chí Minh',
 };
 
-export default function App() {
+export default function AppTuan01() {
   const [profile, setProfile] = useState<StudentInfo>(initialProfile);
   // draf lưu thông tin đang sửa dể so với thông tin hiện tại
   const [draft, setDraft] = useState<StudentInfo>(initialProfile);
