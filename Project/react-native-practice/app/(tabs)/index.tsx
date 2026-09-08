@@ -1,6 +1,9 @@
-import AppTuan01 from '@/components/ThucHanhTuan01_18-08-2026';
-import HomeScreen from '@/components/ThucHanhTuan02_25-08-2026/index_Course-FlatList';
-import StudentDirectory from '@/components/ThucHanhTuan02_25-08-2026/index_Student_Directory';
+import AxiosApi from '@/components/api-example/AxiosApi';
+// import AppTuan01 from '@/components/ThucHanhTuan01_18-08-2026';
+// import HomeScreen from '@/components/ThucHanhTuan02_25-08-2026/index_Course-FlatList';
+// import StudentDirectory from '@/components/ThucHanhTuan02_25-08-2026/index_Student_Directory';
+import BaiTongHop from '@/components/ThucHanhTuan03_08-09-2026/BaiTongHop/BaiTongHop';
+
 
 export default function IndexForAll() {
   return (
@@ -10,6 +13,8 @@ export default function IndexForAll() {
 
     //Bai tập tuần 02 ngày 25-08-2026
     // <HomeScreen />
-    <StudentDirectory />
+    // <StudentDirectory />
+    // <AxiosApi />
+    <BaiTongHop />
   );
 }
