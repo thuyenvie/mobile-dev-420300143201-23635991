@@ -1,8 +1,8 @@
-import AxiosApi from '@/components/api-example/AxiosApi';
+import Login from '@/components/login/login';
 // import AppTuan01 from '@/components/ThucHanhTuan01_18-08-2026';
 // import HomeScreen from '@/components/ThucHanhTuan02_25-08-2026/index_Course-FlatList';
 // import StudentDirectory from '@/components/ThucHanhTuan02_25-08-2026/index_Student_Directory';
-import BaiTongHop from '@/components/ThucHanhTuan03_08-09-2026/BaiTongHop/BaiTongHop';
+// import BaiTongHop from '@/components/ThucHanhTuan03_08-09-2026/BaiTongHop/BaiTongHop';
 
 
 export default function IndexForAll() {
@@ -15,6 +15,7 @@ export default function IndexForAll() {
     // <HomeScreen />
     // <StudentDirectory />
     // <AxiosApi />
-    <BaiTongHop />
+    // <BaiTongHop />
+    <Login />
   );
 }
