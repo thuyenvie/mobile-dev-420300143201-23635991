@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
     ActivityIndicator,
     FlatList,
@@ -12,18 +12,22 @@ type Product = {
     price: number;
 };
 
-interface ApiResponse<T> {
-    data: T[];
+type ProductsResponse = {
+    products: Product[];
     total: number;
-    page: number;
-}
+    skip: number;
+    limit: number;
+};
 
 export default function ProductList() {
     const [products, setProducts] = useState<Product[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [refreshing, setRefreshing] = useState(false);
+    const [error, setError] = useState<string | null>(null);
+    const refreshInProgress = useRef(false);
 
     const fetchProducts = async () => {
+        setError(null);
         try {
             const response = await fetch(
                 "https://dummyjson.com/products"
@@ -33,11 +37,11 @@ export default function ProductList() {
                 throw new Error("API Error");
             }
 
-            const json = await response.json();
+            const json = (await response.json()) as ProductsResponse;
 
             setProducts(json.products);
         } catch (error) {
-            console.error(error);
+            setError(error instanceof Error ? error.message : "Không thể tải sản phẩm.");
         }
     };
 
@@ -56,11 +60,14 @@ export default function ProductList() {
 
     // Pull to refresh
     const handleRefresh = async () => {
+        if (refreshInProgress.current || isLoading) return;
+        refreshInProgress.current = true;
         setRefreshing(true);
 
         try {
             await fetchProducts();
         } finally {
+            refreshInProgress.current = false;
             setRefreshing(false);
         }
     };
@@ -75,6 +82,9 @@ export default function ProductList() {
 
     return (
         <FlatList
+            style={{ flex: 1 }}
+            ListHeaderComponent={error ? <Text>{error}</Text> : null}
+            ListEmptyComponent={<Text>Chưa có sản phẩm. Kéo xuống để tải lại.</Text>}
             data={products}
             keyExtractor={(item) => item.id.toString()}
             refreshing={refreshing}

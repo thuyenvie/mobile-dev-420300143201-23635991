@@ -10,15 +10,17 @@ type Post = {
 
 export default function NewsFeed() {
     const [isLoading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
     const [data, setData] = useState<Post[]>([]);
 
     const getPost = async () => {
         try {
             const response = await fetch('https://jsonplaceholder.typicode.com/todos');
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
             const json = (await response.json()) as Post[];
             setData(json);
         } catch (error) {
-            console.error(error);
+            setError(error instanceof Error ? error.message : "Không thể tải tin tức");
         } finally {
             setLoading(false);
         }
@@ -30,11 +32,13 @@ export default function NewsFeed() {
 
     return(
         <View style = {styles.container}>
+            {error && <Text>{error}</Text>}
             {isLoading ?(
                 <Text>Loading....</Text>
             ) : (
                 <FlatList
                     data={data}
+                    ListEmptyComponent={<Text>Không có tin tức.</Text>}
                     keyExtractor={({id}) => id.toString()}
                     renderItem={({item}) =>(
                         <Text>

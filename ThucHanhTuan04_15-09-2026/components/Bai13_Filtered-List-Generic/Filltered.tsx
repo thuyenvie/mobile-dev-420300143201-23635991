@@ -1,4 +1,7 @@
-function filterByName<T extends { name: string }>(
+import { useState } from "react";
+import { FlatList, Text, TextInput, View } from "react-native";
+
+export function filterByName<T extends { name: string }>(
     items: T[],
     keyword: string
 ): T[] {
@@ -28,8 +31,18 @@ const products: Product[] = [
     { id: 2, name: "Samsung Galaxy", price: 800 },
 ];
 
-const filteredUsers = filterByName(users, "nguyen");
-const filteredProducts = filterByName(products, "iphone");
+export default function FilteredList() {
+    const [keyword, setKeyword] = useState("");
+    const filteredUsers = filterByName(users, keyword);
+    const filteredProducts = filterByName(products, keyword);
 
-console.log(filteredUsers);
-console.log(filteredProducts);
+    return (
+        <View style={{ flex: 1, padding: 16 }}>
+            <TextInput value={keyword} onChangeText={setKeyword} placeholder="Lọc theo tên" style={{ borderWidth: 1, padding: 12 }} />
+            <Text>Người dùng</Text>
+            <FlatList data={filteredUsers} keyExtractor={item => String(item.id)} renderItem={({ item }) => <Text>{item.name}</Text>} ListEmptyComponent={<Text>Không tìm thấy người dùng.</Text>} />
+            <Text>Sản phẩm</Text>
+            <FlatList data={filteredProducts} keyExtractor={item => String(item.id)} renderItem={({ item }) => <Text>{item.name} — ${item.price}</Text>} ListEmptyComponent={<Text>Không tìm thấy sản phẩm.</Text>} />
+        </View>
+    );
+}

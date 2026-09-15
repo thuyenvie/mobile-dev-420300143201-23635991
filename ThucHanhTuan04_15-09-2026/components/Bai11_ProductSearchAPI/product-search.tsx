@@ -11,6 +11,7 @@ type Product = {
 
 type ProductReponse = {
     products: Product[];
+    total: number;
     skip: number;
     limit: number;
 }
@@ -18,29 +19,39 @@ type ProductReponse = {
 export default function ProductSearch() {
     const [products, setProducts] = useState<Product[]>([]);
     const [keyword, setKeyword] = useState("");
-    const [limit, setLimit] = useState("");
+    const [limit, setLimit] = useState("10");
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
 
     const fetchProducts = async (keyword: string, limit: number) => {
+        setLoading(true);
+        setError(null);
         try {
-            const res = await fetch(`https://dummyjson.com/products/search?q=${keyword}&limit=${limit}`);
+            const res = await fetch(`https://dummyjson.com/products/search?q=${encodeURIComponent(keyword)}&limit=${limit}`);
             if (!res.ok) {
-                throw new Error("Error");
+                throw new Error(`HTTP ${res.status}`);
             }
             const json = (await res.json()) as ProductReponse; setProducts(json.products);
         } catch (error) {
-            console.error(error);
+            setError(error instanceof Error ? error.message : "Không thể tải sản phẩm");
+        } finally {
+            setLoading(false);
         }
     }
 
     const fetchProducts2 = async () => {
+        setLoading(true);
+        setError(null);
         try {
             const res = await fetch(`https://dummyjson.com/products`);
             if (!res.ok) {
-                throw new Error("Error");
+                throw new Error(`HTTP ${res.status}`);
             }
             const json = (await res.json()) as ProductReponse; setProducts(json.products);
         } catch (error) {
-            console.error(error);
+            setError(error instanceof Error ? error.message : "Không thể tải sản phẩm");
+        } finally {
+            setLoading(false);
         }
     }
 
@@ -64,12 +75,24 @@ export default function ProductSearch() {
             />
 
             <Button
+                color={'blue'}
                 title="Search"
-                onPress={() => fetchProducts(keyword, Number(limit))}
+                disabled={loading}
+                onPress={() => {
+                    const count = Number(limit);
+                    if (!Number.isInteger(count) || count <= 0) {
+                        setError("Số sản phẩm phải là số nguyên dương.");
+                        return;
+                    }
+                    void fetchProducts(keyword, count);
+                }}
             />
+            {loading && <Text>Đang tải...</Text>}
+            {error && <Text>{error}</Text>}
             <FlatList
-            style={{ flex: 1 }}
+                style={{ flex: 1 }}
                 data={products}
+                ListEmptyComponent={!loading && !error ? <Text>Không có sản phẩm.</Text> : null}
                 keyExtractor={(item) => item.id.toString()}
                 renderItem={({ item }) => (
                     <View style={styles.product}>
@@ -90,13 +113,13 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         flex: 1
     },
-    search:{
+    search: {
         borderWidth: 2,
         borderColor: 'black',
         borderRadius: 9,
         height: 50
     },
-    product:{
+    product: {
         padding: 10
     }
 });
