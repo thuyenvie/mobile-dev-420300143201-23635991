@@ -1,0 +1,8 @@
+# Bỏ qua thư mục cụ thể
+Nộp/
+Phieu_Bai_Tap/
+alert/
+
+# Bỏ qua các thư mục nặng thường gặp trong React Native
+node_modules/
+.expo/
