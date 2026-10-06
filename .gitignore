@@ -3,6 +3,12 @@ Nộp/
 Phieu_Bai_Tap/
 alert/
 
+# Bỏ qua bài thực hành không cần đưa lên repo
+23635991_ToNguyenAnThuyen_LuyenThiGK_Tuan06/ThucHanhTuan06_29-09-2026/
+
+# Bỏ qua các project template React Native
+react-native-practice-template-expo*/
+
 # Bỏ qua các thư mục nặng thường gặp trong React Native
 node_modules/
 .expo/
