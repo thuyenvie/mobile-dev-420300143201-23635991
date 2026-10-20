@@ -249,6 +249,15 @@
       "rating": 4,
       "comment": "Các phương pháp ghi nhớ khá hữu ích cho việc học.",
       "createdAt": "2026-10-11T13:25:00.000Z"
+    },
+    {
+      "bookId": 1,
+      "userId": 11,
+      "userName": "To Nguyen An Thuyen",
+      "rating": 5,
+      "comment": "Tô Nguyễn An Thuyên - 23635991",
+      "createdAt": "2026-10-20T13:05:44.763Z",
+      "id": 11
     }
   ]
 }
