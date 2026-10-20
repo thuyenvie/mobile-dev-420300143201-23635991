@@ -1,0 +1,248 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Nguyễn Văn An",
+      "email": "an@gmail.com",
+      "password": "$2a$10$pDEa13HpLHUEnHXVKrzu4.wsRemAMTMCSW2j96iRhx2EhjKk/v0P2"
+    },
+    {
+      "id": 2,
+      "name": "Trần Thị Bình",
+      "email": "binh@gmail.com",
+      "password": "$2a$10$pDEa13HpLHUEnHXVKrzu4.wsRemAMTMCSW2j96iRhx2EhjKk/v0P2"
+    },
+    {
+      "id": 3,
+      "name": "Lê Minh Châu",
+      "email": "chau@gmail.com",
+      "password": "$2a$10$pDEa13HpLHUEnHXVKrzu4.wsRemAMTMCSW2j96iRhx2EhjKk/v0P2"
+    },
+    {
+      "id": 4,
+      "name": "Phạm Quốc Dũng",
+      "email": "dung@gmail.com",
+      "password": "$2a$10$pDEa13HpLHUEnHXVKrzu4.wsRemAMTMCSW2j96iRhx2EhjKk/v0P2"
+    },
+    {
+      "id": 5,
+      "name": "Hoàng Thị Hà",
+      "email": "ha@gmail.com",
+      "password": "$2a$10$pDEa13HpLHUEnHXVKrzu4.wsRemAMTMCSW2j96iRhx2EhjKk/v0P2"
+    },
+    {
+      "id": 6,
+      "name": "Vũ Đức Huy",
+      "email": "huy@gmail.com",
+      "password": "$2a$10$pDEa13HpLHUEnHXVKrzu4.wsRemAMTMCSW2j96iRhx2EhjKk/v0P2"
+    },
+    {
+      "id": 7,
+      "name": "Đặng Ngọc Linh",
+      "email": "linh@gmail.com",
+      "password": "$2a$10$pDEa13HpLHUEnHXVKrzu4.wsRemAMTMCSW2j96iRhx2EhjKk/v0P2"
+    },
+    {
+      "id": 8,
+      "name": "Bùi Thanh Nam",
+      "email": "nam@gmail.com",
+      "password": "$2a$10$pDEa13HpLHUEnHXVKrzu4.wsRemAMTMCSW2j96iRhx2EhjKk/v0P2"
+    },
+    {
+      "id": 9,
+      "name": "Đỗ Phương Thảo",
+      "email": "thao@gmail.com",
+      "password": "$2a$10$pDEa13HpLHUEnHXVKrzu4.wsRemAMTMCSW2j96iRhx2EhjKk/v0P2"
+    },
+    {
+      "id": 10,
+      "name": "Ngô Anh Tuấn",
+      "email": "tuan@gmail.com",
+      "password": "$2a$10$pDEa13HpLHUEnHXVKrzu4.wsRemAMTMCSW2j96iRhx2EhjKk/v0P2"
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "title": "Dế Mèn Phiêu Lưu Ký",
+      "author": "Tô Hoài",
+      "category": "Văn học",
+      "price": 45000,
+      "image": "https://picsum.photos/seed/book1/300/450",
+      "description": "Hành trình phiêu lưu của Dế Mèn cùng những bài học về tình bạn và lòng dũng cảm."
+    },
+    {
+      "id": 2,
+      "title": "Cho Tôi Xin Một Vé Đi Tuổi Thơ",
+      "author": "Nguyễn Nhật Ánh",
+      "category": "Văn học",
+      "price": 80000,
+      "image": "https://picsum.photos/seed/book2/300/450",
+      "description": "Những câu chuyện hồn nhiên gợi nhớ ký ức tuổi thơ và tình bạn."
+    },
+    {
+      "id": 3,
+      "title": "Mắt Biếc",
+      "author": "Nguyễn Nhật Ánh",
+      "category": "Văn học",
+      "price": 110000,
+      "image": "https://picsum.photos/seed/book3/300/450",
+      "description": "Câu chuyện tình yêu của Ngạn dành cho Hà Lan từ những ngày còn thơ bé."
+    },
+    {
+      "id": 4,
+      "title": "Lão Hạc",
+      "author": "Nam Cao",
+      "category": "Văn học",
+      "price": 35000,
+      "image": "https://picsum.photos/seed/book4/300/450",
+      "description": "Câu chuyện cảm động về người nông dân nghèo với tình thương con và lòng tự trọng."
+    },
+    {
+      "id": 5,
+      "title": "Tắt Đèn",
+      "author": "Ngô Tất Tố",
+      "category": "Văn học",
+      "price": 60000,
+      "image": "https://picsum.photos/seed/book5/300/450",
+      "description": "Tác phẩm phản ánh cuộc sống khốn khó của người nông dân qua nhân vật chị Dậu."
+    },
+    {
+      "id": 6,
+      "title": "Hoàng Tử Bé",
+      "author": "Antoine de Saint-Exupéry",
+      "category": "Thiếu nhi",
+      "price": 75000,
+      "image": "https://picsum.photos/seed/book6/300/450",
+      "description": "Hành trình của một hoàng tử nhỏ khám phá tình yêu, tình bạn và ý nghĩa cuộc sống."
+    },
+    {
+      "id": 7,
+      "title": "Nhà Giả Kim",
+      "author": "Paulo Coelho",
+      "category": "Tiểu thuyết",
+      "price": 95000,
+      "image": "https://picsum.photos/seed/book7/300/450",
+      "description": "Chàng chăn cừu Santiago lên đường tìm kho báu và khám phá ước mơ của chính mình."
+    },
+    {
+      "id": 8,
+      "title": "Đắc Nhân Tâm",
+      "author": "Dale Carnegie",
+      "category": "Kỹ năng sống",
+      "price": 120000,
+      "image": "https://picsum.photos/seed/book8/300/450",
+      "description": "Những nguyên tắc giúp cải thiện giao tiếp và xây dựng các mối quan hệ."
+    },
+    {
+      "id": 9,
+      "title": "Tôi Tài Giỏi, Bạn Cũng Thế!",
+      "author": "Adam Khoo",
+      "category": "Kỹ năng học tập",
+      "price": 135000,
+      "image": "https://picsum.photos/seed/book9/300/450",
+      "description": "Giới thiệu phương pháp học tập, ghi nhớ và thiết lập mục tiêu cá nhân."
+    },
+    {
+      "id": 10,
+      "title": "Lược Sử Thời Gian",
+      "author": "Stephen Hawking",
+      "category": "Khoa học",
+      "price": 150000,
+      "image": "https://picsum.photos/seed/book10/300/450",
+      "description": "Khám phá những câu hỏi về vũ trụ, không gian, thời gian và hố đen."
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "bookId": 1,
+      "userId": 1,
+      "userName": "Nguyễn Văn An",
+      "rating": 2,
+      "comment": "Hơi khó đọc với mình.",
+      "createdAt": "2026-10-03T09:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "bookId": 1,
+      "userId": 2,
+      "userName": "Trần Thị Bình",
+      "rating": 5,
+      "comment": "Tuyệt vời, mình đọc 2 lần rồi.",
+      "createdAt": "2026-10-02T09:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "bookId": 2,
+      "userId": 3,
+      "userName": "Lê Minh Châu",
+      "rating": 5,
+      "comment": "Đọc xong thấy nhớ những ngày tuổi thơ.",
+      "createdAt": "2026-10-04T08:30:00.000Z"
+    },
+    {
+      "id": 4,
+      "bookId": 3,
+      "userId": 4,
+      "userName": "Phạm Quốc Dũng",
+      "rating": 4,
+      "comment": "Câu chuyện nhẹ nhàng nhưng để lại nhiều cảm xúc.",
+      "createdAt": "2026-10-05T10:15:00.000Z"
+    },
+    {
+      "id": 5,
+      "bookId": 4,
+      "userId": 5,
+      "userName": "Hoàng Thị Hà",
+      "rating": 5,
+      "comment": "Tác phẩm ngắn nhưng rất cảm động.",
+      "createdAt": "2026-10-06T07:45:00.000Z"
+    },
+    {
+      "id": 6,
+      "bookId": 5,
+      "userId": 6,
+      "userName": "Vũ Đức Huy",
+      "rating": 4,
+      "comment": "Nội dung sâu sắc, giúp mình hiểu thêm về xã hội thời trước.",
+      "createdAt": "2026-10-07T14:00:00.000Z"
+    },
+    {
+      "id": 7,
+      "bookId": 6,
+      "userId": 7,
+      "userName": "Đặng Ngọc Linh",
+      "rating": 5,
+      "comment": "Một cuốn sách dễ thương và có nhiều điều để suy ngẫm.",
+      "createdAt": "2026-10-08T11:20:00.000Z"
+    },
+    {
+      "id": 8,
+      "bookId": 7,
+      "userId": 8,
+      "userName": "Bùi Thanh Nam",
+      "rating": 3,
+      "comment": "Thông điệp khá hay nhưng diễn biến hơi chậm với mình.",
+      "createdAt": "2026-10-09T16:10:00.000Z"
+    },
+    {
+      "id": 9,
+      "bookId": 8,
+      "userId": 9,
+      "userName": "Đỗ Phương Thảo",
+      "rating": 4,
+      "comment": "Có nhiều ví dụ hữu ích để áp dụng vào giao tiếp.",
+      "createdAt": "2026-10-10T09:40:00.000Z"
+    },
+    {
+      "id": 10,
+      "bookId": 9,
+      "userId": 10,
+      "userName": "Ngô Anh Tuấn",
+      "rating": 4,
+      "comment": "Các phương pháp ghi nhớ khá hữu ích cho việc học.",
+      "createdAt": "2026-10-11T13:25:00.000Z"
+    }
+  ]
+}
